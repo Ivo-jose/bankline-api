@@ -11,6 +11,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.dio.santander.bankline.api.model.enums.MovimentacaoTipo;
+
 @Entity
 @Table(name = "tab_movimentacao")
 public class Movimentacao {
@@ -24,6 +26,9 @@ public class Movimentacao {
 	private Double valor;
 	@Enumerated(EnumType.STRING)
 	private MovimentacaoTipo tipo;
+	@Column(name = "id_conta")
+	private Integer idConta;
+	
 	public Integer getId() {
 		return id;
 	}
@@ -55,5 +60,12 @@ public class Movimentacao {
 		this.tipo = tipo;
 	}
 	
+	public Integer getIdConta() {
+		return idConta;
+	}
+	
+	public void setIdConta(Integer idConta) {
+		this.idConta = idConta;
+	}
 	
 }

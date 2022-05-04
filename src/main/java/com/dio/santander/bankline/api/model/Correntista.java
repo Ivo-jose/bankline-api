@@ -18,7 +18,7 @@ public class Correntista {
 	@Column(length = 20)
 	private String cpf;
 	@Column(length = 60)
-	private String name;
+	private String nome;
 	//Composition
 	@Embedded
 	private Conta conta;
@@ -40,12 +40,12 @@ public class Correntista {
 		this.cpf = cpf;
 	}
 	
-	public String getName() {
-		return name;
+	public String getNome() {
+		return nome;
 	}
 	
-	public void setName(String name) {
-		this.name = name;
+	public void setNome(String name) {
+		this.nome = name;
 	}
 	
 	public Conta getConta() {
