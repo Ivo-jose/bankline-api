@@ -3,7 +3,6 @@ package com.dio.santander.bankline.api.dto;
 import com.dio.santander.bankline.api.model.enums.MovimentacaoTipo;
 
 public class NovaMovimentacao {
-
 	private String descricao;
 	private Double valor;
 	private MovimentacaoTipo tipo;
@@ -33,6 +32,4 @@ public class NovaMovimentacao {
 	public void setIdConta(Integer idConta) {
 		this.idConta = idConta;
 	}
-	
-	
 }

@@ -17,7 +17,6 @@ import com.dio.santander.bankline.api.service.MovimentacaoService;
 @RestController
 @RequestMapping("/movimentacoes")
 public class MovimentacaoController {
-	
 	@Autowired
 	private MovimentacaoRepository repository;
 	
@@ -25,12 +24,12 @@ public class MovimentacaoController {
 	private MovimentacaoService service;
 	
 	@GetMapping
-	public List<Movimentacao> findAll() {
+	public List<Movimentacao> findAll(){
 		return repository.findAll();
 	}
 	
 	@PostMapping
 	public void save(@RequestBody NovaMovimentacao movimentacao) {
-		service.save(movimentacao);;
+		service.save(movimentacao);
 	}
 }
